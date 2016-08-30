@@ -27,4 +27,11 @@ public class MainActivityTest {
         activity = Robolectric.setupActivity(MainActivity.class);
     }
 
+    @Test
+    public void testFillTeamArrayPopulatesAllTeams() {
+        ArrayList<String> allTeams = new ArrayList<String>();
+        activity.fillTeamArray(allTeams);
+        assertTrue(allTeams.size() == 10);
+    }
+
 }

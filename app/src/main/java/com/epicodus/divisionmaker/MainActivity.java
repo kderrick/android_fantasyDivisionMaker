@@ -22,6 +22,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
+    public void fillTeamArray(ArrayList<String> allTeams) {
+        allTeams.add("Kyle");
+        allTeams.add("Alysa");
+        allTeams.add("Evan");
+        allTeams.add("Matt");
+        allTeams.add("Kevin");
+        allTeams.add("Josh");
+        allTeams.add("Todd");
+        allTeams.add("David");
+        allTeams.add("Pat");
+        allTeams.add("Brooks");
+    }
 }
+
