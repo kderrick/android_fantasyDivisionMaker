@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         for(int i = 0; i <= 4; i++) {
             int number = (int)  Math.floor(Math.random() * startingTotal);
             division1.add(( allTeams.get(number).toString()));
+            allTeams.remove(number);
+            startingTotal = startingTotal - 1;
         }
         System.out.println(division1);
         return division1;

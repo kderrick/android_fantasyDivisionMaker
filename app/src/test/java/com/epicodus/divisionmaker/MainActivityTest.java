@@ -43,4 +43,21 @@ public class MainActivityTest {
         assertTrue(division1.size() == 5);
     }
 
+    @Test
+    public void validateGetDivision1WillNotProduceDuplicates() {
+        ArrayList<String> allTeams = new ArrayList<String>();
+        ArrayList<String> division1 = new ArrayList<String>();
+        activity.fillTeamArray(allTeams);
+        division1 = activity.getDivision1(allTeams);
+        for(int j = 0; j <= 4; j++) {
+            for (int i = (1 + j) ; i <= 4; i++) {
+                System.out.println(division1.get(j));
+                System.out.println(division1.get(i));
+                System.out.println("ITERATION");
+                assertFalse(((division1.get(j).equals(division1.get(i)))));
+//                j = j + 1;
+            }
+        }
+    }
+
 }
