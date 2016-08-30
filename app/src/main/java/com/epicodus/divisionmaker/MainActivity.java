@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        fillTeamArray(allTeams);
+        getDivision1(allTeams);
 
     }
 
@@ -33,6 +34,17 @@ public class MainActivity extends AppCompatActivity {
         allTeams.add("David");
         allTeams.add("Pat");
         allTeams.add("Brooks");
+    }
+
+    public ArrayList<String> getDivision1(ArrayList allTeams) {
+        ArrayList<String> division1 = new ArrayList<String>();
+        int startingTotal = 9;
+        for(int i = 0; i <= 4; i++) {
+            int number = (int)  Math.floor(Math.random() * startingTotal);
+            division1.add(( allTeams.get(number).toString()));
+        }
+        System.out.println(division1);
+        return division1;
     }
 }
 

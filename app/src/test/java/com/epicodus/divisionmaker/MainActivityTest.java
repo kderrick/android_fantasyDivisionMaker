@@ -34,4 +34,13 @@ public class MainActivityTest {
         assertTrue(allTeams.size() == 10);
     }
 
+    @Test
+    public void testGetDivision1Has5Names() {
+        ArrayList<String> allTeams = new ArrayList<String>();
+        ArrayList<String> division1 = new ArrayList<String>();
+        activity.fillTeamArray(allTeams);
+        division1 = activity.getDivision1(allTeams);
+        assertTrue(division1.size() == 5);
+    }
+
 }
